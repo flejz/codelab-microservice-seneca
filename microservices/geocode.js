@@ -21,7 +21,7 @@ module.exports = function geocode(options) {
 
   });
 
-  The maplink pattern matching
+  // The maplink pattern matching
   this.add('role:map,cmd:geocode,source:maplink', (params, respond) => {
 
     maplinkClient.search(params.address)
