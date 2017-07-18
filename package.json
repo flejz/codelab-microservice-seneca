@@ -1,0 +1,28 @@
+{
+  "name": "tdc-microservice-seneca",
+  "version": "1.0.0",
+  "description": "TDC 2017 Tech Talk about how to build a microservice with Seneca.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 4000 tests/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaimelopesflores/tdc-microservice-seneca.git"
+  },
+  "author": "Jaime Flores @devandroll",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaimelopesflores/tdc-microservice-seneca/issues"
+  },
+  "homepage": "https://github.com/jaimelopesflores/tdc-microservice-seneca#readme",
+  "dependencies": {
+    "@google/maps": "^0.4.2",
+    "@maplink/maplink-geocoder": "^1.0.1",
+    "express": "^4.15.3",
+    "seneca": "^3.4.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  }
+}
