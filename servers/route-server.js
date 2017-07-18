@@ -1,3 +1,3 @@
 require('seneca')()
   .use('../microservices/route')
-  .listen(3031);
+  .listen(process.env.PORT || 3031);

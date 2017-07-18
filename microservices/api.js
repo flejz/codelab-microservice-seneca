@@ -1,15 +1,24 @@
+// Microservice
 module.exports = function api(options) {
 
-  let valid_ops = { geocode:'geocode', route:'route' }
+  let validOps = { geocode:'geocode', route:'route' };
 
+  // Api pattern
   this.add('role:api,path:map', function (msg, respond) {
 
-    let params = msg.args.query
-    params.cmd = msg.args.params.cmd
+    let cmd = msg.args.params.cmd;
+
+    if (!validOps[cmd]) {
+      return respond(new Error('Operation not valid'))
+    }
+
+    let params = msg.args.query;
+    params.cmd = msg.args.params.cmd;
 
     this.act('role:map', params, respond)
   })
 
+  // Seneca Web init pattern
   this.add('init:api', function (msg, respond) {
 
     this.act('role:web',{
@@ -23,7 +32,7 @@ module.exports = function api(options) {
           }
         }
       }
-    }, respond)
-  })
+    }, respond);
+  });
 
 }

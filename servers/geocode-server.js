@@ -1,3 +1,3 @@
 require('seneca')()
   .use('../microservices/geocode')
-  .listen(3030);
+  .listen(process.env.PORT || 3030);

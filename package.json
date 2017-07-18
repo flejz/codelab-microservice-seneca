@@ -4,6 +4,7 @@
   "description": "TDC 2017 Tech Talk about how to build a microservice with Seneca.js",
   "main": "index.js",
   "scripts": {
+    "start": "node servers/geocode-server.js",
     "test": "mocha --timeout 4000 tests/**",
     "api": "node servers/api-server.js",
     "geocode": "node servers/geocode-server.js",

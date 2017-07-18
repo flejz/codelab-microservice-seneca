@@ -19,6 +19,6 @@ require('seneca')()
   .use(SenecaWeb, senecaWebConfig) // The integration happens here
   .use('../microservices/api') // The api endpoint microservice
 
-  // connections
+  // Connection pipes
   .client({ port: 3030, pin: 'role:map,cmd:geocode' })
   .client({ port: 3031, pin: 'role:map,cmd:route' })
