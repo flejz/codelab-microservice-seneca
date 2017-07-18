@@ -3,20 +3,14 @@ const seneca = require('seneca')({
   })
   .use('../microservices/route');
 
-
 describe('Routing', _ => {
-
   describe('An origin and a destination', _ => {
-
-    it('Should return a route', (done) => {
+    it('Return a route', (done) => {
 
       seneca.act('role:map,cmd:route', {
-
         origin: 'Maplink',
         destination: 'Anhembi Morumbi Vila Olímpia'
-
       }, done);
     });
   });
-
 });

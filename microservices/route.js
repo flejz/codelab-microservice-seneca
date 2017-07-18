@@ -4,7 +4,7 @@ const googleClient = require('@google/maps').createClient({
 });
 
 // Microservice
-module.exports = function geocode(options) {
+module.exports = function route(options) {
 
   // The "this" is in the Seneca context
   // Adding a pattern to be matched

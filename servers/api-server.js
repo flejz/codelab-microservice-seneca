@@ -20,5 +20,6 @@ require('seneca')()
   .use('../microservices/api') // The api endpoint microservice
 
   // Connection pipes
-  .client({ port: 3030, pin: 'role:map,cmd:geocode' })
+  .client({ host: 'tdc-microservices-geocode.herokuapp.com', port:80, pin: 'role:map,cmd:geocode' })
+  //.client({ port: 3030, pin: 'role:map,cmd:geocode' })
   .client({ port: 3031, pin: 'role:map,cmd:route' })

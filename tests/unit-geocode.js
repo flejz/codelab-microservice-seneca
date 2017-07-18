@@ -3,30 +3,32 @@ const seneca = require('seneca')({
   })
   .use('../microservices/geocode');
 
+describe('Geocoding Google', _ => {
+  it('List of candidates', (done) => {
 
-describe('Geocoding', _ => {
+    seneca.act('role:map,cmd:geocode', {
+      address: 'Rua Fidencio Ramos, 302'
+    }, (err, response) => {
 
-  describe('An address', _ => {
+      console.log('** GEOCODE MAPLINK');
+      console.log(response);
 
-    it('Should return a list of address candidates', (done) => {
-
-      seneca.act('role:map,cmd:geocode', {
-
-        address: 'Rua Fidêncio Ramos, 302'
-
-      }, done);
-    });
-  });
-
-  describe('A city', _ => {
-
-    it('Should return a list of city candidates', (done) => {
-
-      seneca.act('role:map,cmd:geocode,type:city', {
-
-        city: 'Santiago - Chile'
-
-      }, done);
+      done()
     });
   });
 });
+
+// describe('Geocoding Maplink', _ => {
+//   it('List of candidates', (done) => {
+//
+//     seneca.act('role:map,cmd:geocode,source:maplink', {
+//       address: 'Rua Fidencio Ramos'
+//     }, (err, response) => {
+//
+//       console.log('** GEOCODE MAPLINK');
+//       console.log(response);
+//
+//       done()
+//     });
+//   });
+// });
