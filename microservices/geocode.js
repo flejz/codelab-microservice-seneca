@@ -3,9 +3,8 @@ const googleClient = require('@google/maps').createClient({
   key: 'AIzaSyCyCkLzlMKp3m1bPjVYWorb-Cgof2Ff4B0  '
 });
 
-// Maplink client
-const maplinkClient = require ('@maplink/maplink-geocoder')('NGKiNG2iNJUkNIUkOGoBNXoAOj==');
-
+// // Maplink client
+// const maplinkClient = require ('@maplink/maplink-geocoder')('NGKiNG2iNJUkNIUkOGoBNXoAOj==');
 
 // Microservice
 module.exports = function geocode(options) {
@@ -21,11 +20,11 @@ module.exports = function geocode(options) {
 
   });
 
-  // The maplink pattern matching
-  this.add('role:map,cmd:geocode,source:maplink', (params, respond) => {
-
-    maplinkClient.search(params.address)
-      .then(result => respond(null, JSON.parse(result).results))
-      .catch(respond);
-  });
+  // // The maplink pattern matching
+  // this.add('role:map,cmd:geocode,source:maplink', (params, respond) => {
+  //
+  //   maplinkClient.search(params.address)
+  //     .then(result => respond(null, JSON.parse(result).results))
+  //     .catch(respond);
+  // });
 }

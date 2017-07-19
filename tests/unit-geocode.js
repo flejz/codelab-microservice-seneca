@@ -7,10 +7,10 @@ describe('Geocoding Google', _ => {
   it('List of candidates', (done) => {
 
     seneca.act('role:map,cmd:geocode', {
-      address: 'Rua Fidencio Ramos, 302'
+      address: 'Rua Fidencio Ramos'
     }, (err, response) => {
 
-      console.log('** GEOCODE MAPLINK');
+      console.log('** GEOCODE GOOGLE');
       console.log(response);
 
       done()

@@ -23,6 +23,7 @@
   "dependencies": {
     "@google/maps": "^0.4.2",
     "@maplink/maplink-geocoder": "^1.0.1",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "seneca": "^3.4.1",
