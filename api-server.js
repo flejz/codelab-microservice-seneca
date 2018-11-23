@@ -17,9 +17,8 @@ Express()
 // Initializing the Seneca
 require('seneca')()
   .use(SenecaWeb, senecaWebConfig) // The integration happens here
-  .use('../microservices/api') // The api endpoint microservice
+  .use('../api') // The api endpoint microservice
 
   // Connection pipes
-  //.client({ host: 'tdc-microservices-geocode.herokuapp.com', port:80, pin: 'role:map,cmd:geocode' })
-  .client({ port: 3030, pin: 'role:map,cmd:geocode' })
-  .client({ port: 3031, pin: 'role:map,cmd:route' })
+  //.client({ host: 'https://codelab-microservice-seneca.glitch.me', port:80, pin: 'role:math,cmd:hypotenuse' });
+  .client(3032);

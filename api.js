@@ -32,7 +32,7 @@ module.exports = function api(options) {
     let params = msg.args.query;
     params.cmd = msg.args.params.cmd;
 
-    this.act('role:map', params, respond)
+    this.act('role:map', params, respond);
   })
 
 }
